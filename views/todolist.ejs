@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+    <h1>
+        <%= currentUser.username %>'s ToDo List 
+    </h1>
+    <ul>
+        <% currentUser.todolist.forEach((todo) =>{ %>
+        <li><%= todo.text %></li> 
+    <% }) %>
+    
+    </ul>
+
+    <br>
+
+    <h3>Add A new todo</h3>
+    <form action="/list" method="POST">
+        <input type="text" name="text" placeholder="Add A new todo here">
+        <button>Submit</button>
+    </form>
+    <ul>
+            <li><a href="/logout">logout</a></li>
+    </ul>
+
+<% include partials/footer %>

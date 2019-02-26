@@ -1,0 +1,16 @@
+<% include partials/header %>
+
+        <h1>Welome to TODO app home page</h1>
+        <ul>
+                
+                <% if (currentUser) { %>
+                <li><a href="/logout">logout</a></li>
+                <li><a href="/list">Todo list</a></li>
+                <% } else { %>
+                        <li><a href="/login">login</a></li>
+                        <li><a href="/register">register</a></li>
+                        <% } %>
+        </ul>
+
+
+<% include partials/footer %>
